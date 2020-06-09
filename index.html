@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google</title>
+    <link rel="stylesheet" type="text/css" href="./src/styles/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/v4-shims.js"></script>
+</head>
+<body>
+    <header class="header">
+        <a class="link__btn link__btn_text">Gmail</a>
+        <a class="link__btn link__btn_text">Images</a>
+        <a class="link__btn boxes"></a>
+        <a class="link__btn profile">
+            <span class="profile-pic"></span>
+        </a>
+    </header>
+    <main class="main">
+        <div class="logo__container">
+            <img class="logo" src="./src/img/googlelogo.png" alt="Google">
+        </div>
+        <form class="search__form" onsubmit="return false">
+            <div class="search__container">
+                <i class="fas fa-search"></i>
+                <input class="enter" type="search" >
+            </div>
+            <div class="search-btns__container">
+                <input type="submit" id="search" value="Google Search">&nbsp;
+                <input type="submit" id="lucky-search" value="I'm Feeling Lucky">
+            </div>
+            <div class="search-offers">
+                <span>Google offered in:</span>&nbsp;
+                <a href="#">русский</a>
+                &nbsp;
+                <a href="#">Беларуская</a>
+            </div>
+        </form>
+    </main>
+    <footer class="footer">
+        <div class="country">
+            <span>Belarus</span>
+        </div>
+        <div class="other">
+            <div class="left">
+                <a class="link__btn link__btn_text">Advertising</a>
+                <a class="link__btn link__btn_text">Business</a>
+                <a class="link__btn link__btn_text">About</a>
+                <a class="link__btn link__btn_text">How Search works</a>
+            </div>
+            <div class="right">
+                <a class="link__btn link__btn_text">Privacy</a>
+                <a class="link__btn link__btn_text">Terms</a>
+                <a class="link__btn link__btn_text">Settings</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const enter = document.querySelector('.enter');
+    enter.addEventListener('click', (e) => {
+        e.currentTarget.parentElement.classList.add('active');
+        console.log(e.currentTarget.parentElement);
+    });
+    enter.addEventListener('blur', (e) => {
+        e.currentTarget.parentElement.classList.remove('active');
+        console.log(e.currentTarget.parentElement);
+    });
+</script>
+</html>
